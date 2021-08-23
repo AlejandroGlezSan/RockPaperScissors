@@ -1,0 +1,212 @@
+@font-face {
+    font-family: FuenteTitulo;
+    src: url(fonts/SummitRegular-Inline.ttf);
+}
+#TitleRPS {
+    font-family: FuenteTitulo;
+    color: white;
+    font-size: 3vw;
+    margin-bottom: 5vw;
+}
+#TitleRPS span {
+    left: 30vw;
+    position: relative;
+    animation-name: TitleMoveAndFadeIn;
+    animation-duration: 2s;
+}
+body {
+    background-color: black;
+}
+#img-points-container {
+    text-align: center;
+    color: white;
+    font-size: 3vw;
+}
+#img-points-container p {
+    margin-top: 1vw;
+}
+#PlayerPoints {
+    float: left;
+}
+#ComputerPoints {
+    float: right;
+}
+#vs-image {
+    width: 10vw;
+    height: 8vw;
+    filter: invert(1) brightness(180);
+}
+#PlayerImage {
+    position: relative;
+    width: 10vw;
+    height: 10vw;
+}
+#ComputerImage {
+    position: relative;
+    width: 10vw;
+    height: 10vw;
+}
+#no-img {
+    width: 150px;
+    height: 200px;
+}
+#Game-Space {
+    display: block;
+}
+#Main-Menu-Buttons {
+    display: block;
+    text-align: center;
+    position: relative;
+}
+#Main-Menu-Buttons div {
+    margin-bottom: 2vw;
+}
+#Main-Menu-Buttons button {
+    padding: 1vw;
+    position: relative;
+    top: 0;
+    animation-name: ButtonsMoveAndFadeIn;
+    animation-duration: 1s;
+}
+#Select-Game-Mode {
+    display: none;
+    text-align: center;
+}
+#Instructions {
+    display: none;
+    color: white;
+    text-align: center;
+}
+#Instructions div {
+    margin-bottom: 2vw;
+}
+#Credits-display {
+    display: none;
+    color: white;
+    text-align: center;
+}
+#Credits-display div {
+    margin-bottom: 2vw;
+}
+#Customize-display {
+    display: none;
+}
+#Game-Space {
+    display: none;
+}
+#RightOrWrongPlayer {
+    width: 3vw;
+    height: 3vw;
+    position: absolute;
+}
+#RightOrWrongComputer {
+    width: 3vw;
+    height: 3vw;
+    position: absolute;
+}
+
+#PlayAgain {
+    background-color: #1f1f14;
+    font-size: 3vw;
+    text-align: center;
+    color: white;
+    border-style: double;
+    padding: 2vw;
+    z-index: 1;
+    display: none;
+    position: fixed;
+    bottom: 20vw;
+    right: 32.6vw;
+}
+
+#PlayAgain p {
+    margin-top: 0;
+}
+/* Animations */
+
+@keyframes TitleMoveAndFadeIn {
+    from {left: 0; color: transparent;}
+    to {left: 30vw; color: white;}
+}
+@keyframes SubTitleMoveAndFadeIn {
+    from {left: 44vw; color: transparent;}
+    to {left: 30vw; color: white;}
+}
+@keyframes TitleFadeIn {
+    from {color: transparent;}
+    to {color: white;}
+}
+@keyframes ButtonsMoveAndFadeIn {
+    from {top: 10vw; color: transparent; background-color: transparent;}
+    to {top: 0; color: black; background-color: white;}
+}
+
+/* Flexbox */
+
+#Flexbox-Container {
+    display: flex;
+    flex-direction: row;
+}
+#Flexbox-Container div {
+    position: relative;
+    height: 20vw;
+    border: 2px solid black;
+    margin: 1vw;
+    padding: 1vw;
+    flex: 1;
+    text-align: center;
+}
+#Flexbox-Container2 {
+    display: flex;
+    flex-direction: row;
+}
+#Flexbox-Container2 img {
+    width: 10vw;
+    height: 10vw;
+}
+#Flexbox-Container2 div {
+    border: 0.3vw solid dodgerblue;
+    text-align: center;
+    background-color: dodgerblue;
+    height: 10vw;
+    flex: 1;
+    margin: 1vw;
+    padding: 1vw;
+}
+#Flexbox-Container3 {
+    display: none;
+    flex-direction: row;
+}
+#Flexbox-Container3 img {
+    width: 10vw;
+    height: 10vw;
+}
+#Flexbox-Container3 div {
+    border: 0.3vw solid dodgerblue;
+    text-align: center;
+    background-color: dodgerblue;
+    height: 10vw;
+    flex: 1;
+    margin: 1vw;
+    padding: 1vw;
+}
+/* GRID */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+.grid-container2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+.grid-item {
+  padding: 20px;
+  text-align: center;
+}
+.grid-item2 {
+    padding: 20px;
+    text-align: center;
+  }

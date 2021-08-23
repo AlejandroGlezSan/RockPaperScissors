@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock, Paper, Scissors game</title>
+        <!--Style-->
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <!--META TAGS---->
+        <meta name="description" content="A rock, paper, scissors game by Alejandro Gonzalez Santana" />
+        <meta name="keywords" content="Javascript, Game, Rock, Paper, Scissors, Alejandro Gonzalez Santana" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Alejandro González Santana - Web Developer" />
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="Main-Menu">
+            <h1 id="TitleRPS"><span>Rock, Paper,<br> Scissors game</span></h1>
+            <div id="Main-Menu-Buttons">
+                <div><button type="button" id="Start-Game" onclick="SelectGameMode()">Start Game</button></div>
+                <div><button type="button" id="How-To-Play" onclick="HowToPlay()">How to Play</button></div>
+                <div><button type="button" id="Credits-button" onclick="Credits()">Credits</button></div>
+            </div>
+            <div id="Instructions">
+                <div>
+                Rock wins Scissors, Paper wins Rock and Scissors wins Paper, you have to win
+                a certain number of rounds against the computer to win the game, you can customize
+                the number of rounds. Good Luck!
+                </div>
+                <div><button type="button" id="Return" onclick="Return()">Return to Menu</button></div>
+            </div>
+            <div id="Credits-display">
+                <div>
+                Made by Alejandro Gonzalez Santana - Web Developer
+                Images by
+                Fonts by
+                </div>
+                <div><button type="button" id="Return" onclick="Return()">Return to Menu</button></div>
+            </div>
+            <div id="Select-Game-Mode">
+                <p>Please select number of points to win: </p>
+                <button type="button" onclick="ThreePointsToWin()">3 points</button>
+                <button type="button" onclick="SixPointsToWin()">6 points</button>
+                <button type="button" onclick="NinePointsToWin()">9 points</button>
+                <button type="button" onclick="Customize()">Customize Rounds</button>
+                <button type="button" onclick="Return()">Return</button>
+            </div>
+            <div id="Customize-display">
+                <p>Please type the number of points in order to win: </p>
+                <input type="number" id="NumberRounds" name="Number of Rounds" min="1" max="99" value="1">
+                <button type="button" onclick="CustomPointsToWin()">Start Game</button>
+            </div>
+        </div>
+        <div id="Game-Space">
+            <div id="Flexbox-Container">
+                <div>
+                    <img id="PlayerImage" src="images/transp-bg.png">
+                    <img id="RightOrWrongPlayer" src="images/transp-bg.png">
+                </div>
+                <div id="img-points-container">
+                    <img id="vs-image" src="images/vs-image.png">
+                    <p>POINTS: </p>
+                    <span>
+                        <span id="PlayerPoints">0</span>
+                        <span id="ComputerPoints">0</span>
+                    </span>
+                </div>
+                <div>
+                    <img id="ComputerImage" src="images/transp-bg.png">
+                    <img id="RightOrWrongComputer" src="images/transp-bg.png">
+                </div>
+            </div>
+            <div id="Flexbox-Container2">
+                <div onmouseover="DisplayBorder(this)" onmouseout="DontDisplayBorder(this)" onclick="setTimeout(playersChoiceRock, 500)">
+                    <img src="images/rock.png">
+                </div>
+                <div onmouseover="DisplayBorder(this)" onmouseout="DontDisplayBorder(this)" onclick="setTimeout(playersChoicePaper, 500)">
+                    <img src="images/paperWhite.png">
+                </div>
+                <div onmouseover="DisplayBorder(this)" onmouseout="DontDisplayBorder(this)" onclick="setTimeout(playersChoiceScissors, 500)">
+                    <img src="images/scissors.png">
+                </div>
+            </div>
+            <div id="Flexbox-Container3">
+                <div>
+                    <img src="images/rock.png">
+                </div>
+                <div>
+                    <img src="images/paperWhite.png">
+                </div>
+                <div>
+                    <img src="images/scissors.png">
+                </div>
+            </div>
+        </div>
+        <div id="PlayAgain">
+            <p id="WinnerInfo"></p>
+            <button type="button" onclick="Return()">Return to Menu</button>
+            <button type="button" onclick="PlayAgain()">Play Again</button>
+        </div>
+        <script src="logic.js"></script>
+    </body>
+</html>
